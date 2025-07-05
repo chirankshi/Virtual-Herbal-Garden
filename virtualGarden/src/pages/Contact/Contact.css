@@ -1,0 +1,259 @@
+.contact-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f8f1; /* Light, natural background color */
+  }
+  
+  .herbal-hero-section {
+    width: 100%;
+    height: 40vh; /* Adjusted height for better flow with booking options */
+    background-image: url('../../assets/images/contactMain2.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items to the bottom */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text aligns to the left */
+    padding: 3rem; /* Increased padding inside hero */
+    box-sizing: border-box;
+    border-radius: 12px; /* Softened corners for a modern look */
+    margin-bottom: 30px; /* Added margin below hero */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  }
+  
+  .herbal-hero-section h1 {
+    font-size: 3em; /* Larger, more impactful title */
+    margin-bottom: 0px; /* Remove default bottom margin */
+    margin-left: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow for better readability on the image */
+  }
+  
+  
+  .contact-container {
+    display: flex;
+    width: 100%; /* Slightly reduced width for better centering and visual appeal */
+    background-color: #fff;
+    border-radius: 12px; /* Consistent rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Consistent shadow */
+    overflow: hidden;
+    padding: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 40px; /* Added margin below contact form */
+  }
+  
+  .herbal-content {
+    flex: 1;
+    padding: 40px; /* Increased padding */
+    border-right: 1px solid #e0e0e0; /* Lighter border */
+  }
+  
+  .herbal-content h2 {
+    color: #216624; /* A more vibrant green */
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    text-align: left;
+  }
+  
+  .herbal-content p {
+    color: #555; /* Darker, more readable text */
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .herbal-feature {
+    margin-bottom: 25px;
+  }
+  
+  .herbal-feature h4 {
+    color: #388E3C; /* A deeper green */
+    margin-bottom: 8px;
+    font-size: 1.3em;
+    font-weight: 600; /* Slightly bolder heading */
+  }
+  
+  .herbal-feature p {
+    color: #777;
+    line-height: 1.7;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 40px; /* Increased padding */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form .booking-options select,
+  .contact-form .booking-preferences input[type="date"],
+  .contact-form .booking-preferences input[type="time"] {
+    padding: 14px; /* Slightly larger input fields */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Softer rounded corners for inputs */
+    font-size: 1.1em;
+  }
+  
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus,
+  .contact-form .booking-options select:focus,
+  .contact-form .booking-preferences input[type="date"]:focus,
+  .contact-form .booking-preferences input[type="time"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25); /* More vibrant focus shadow */
+  }
+  
+  .contact-form select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23555" viewBox="0 0 4 5"><path fill-rule="evenodd" d="M2 0L0 2h4L2 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px; /* Slightly taller textarea */
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #4CAF50; /* Vibrant green button */
+    color: white;
+    padding: 14px 24px; /* Larger button padding */
+    border: none;
+    border-radius: 6px; /* Rounded button corners */
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #388E3C; /* Darker green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+  }
+  
+  .booking-options,
+  .booking-preferences {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .booking-options label,
+  .booking-preferences label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .booking-preferences {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .booking-preferences input[type="date"],
+  .booking-preferences input[type="time"] {
+    flex: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      width: 95%;
+    }
+  
+    .herbal-content {
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 30px;
+    }
+  
+    .contact-form {
+      padding: 30px;
+    }
+  
+    .herbal-hero-section {
+      width: 95%;
+      height: auto; /* Adjust height for smaller screens */
+      padding: 2rem;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      justify-content: flex-end; /* Align items to the bottom */
+      align-items: flex-start; /* Align items to the left */
+      text-align: left; /* Ensure text aligns to the left */
+    }
+  
+    .herbal-hero-section h1 {
+      font-size: 2.2em;
+    }
+  
+    .herbal-hero-section p {
+      font-size: 1.1em;
+      max-width: 90%;
+    }
+  
+    .herbal-content h2 {
+      font-size: 1.9em;
+      margin-bottom: 15px;
+    }
+  
+    .herbal-feature {
+      margin-bottom: 18px;
+    }
+  
+    .herbal-feature h4 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+  
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form select,
+    .contact-form textarea,
+    .contact-form .booking-options select,
+    .contact-form .booking-preferences {
+      font-size: 1em;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      flex-direction: column; /* Stack booking preferences on smaller screens */
+      gap: 0;
+    }
+  
+    .booking-preferences input[type="date"],
+    .booking-preferences input[type="time"] {
+      flex: none;
+      width: 100%;
+    }
+  }
+  .success-message {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

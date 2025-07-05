@@ -1,0 +1,257 @@
+.tour-hero {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  /* border:2px solid red !important; */
+  background-image: url("../../assets/images/tourhero.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tour-hero__overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;   /* Push content to the bottom */
+  justify-content: flex-start; /* Align content to the left */
+  padding: 0 0 40px 10%;  /* Bottom padding + left spacing */
+}
+
+.tour-hero__title {
+  font-size: 3rem;
+  /* font-weight: bold; */
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.tourContainer{
+  min-height: 100vh;
+  /* max-width: 95vw; */
+  margin: 0 auto !important;
+
+}
+
+
+
+.Tourmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.Tourmodal-container {
+  background-color: #fefefe;
+  padding: 25px 30px;
+  border-radius: 14px;
+  max-width: 700px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Tourmodal-title {
+  font-size: 30px;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.Tourmodal-section {
+  margin-bottom: 20px;
+}
+
+.Tourmodal-section h3 {
+  font-size: 20px;
+  color: #1b5e20;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #c8e6c9;
+  padding-bottom: 4px;
+}
+
+.Tourmodal-section p {
+  font-size: 15px;
+  margin: 6px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.Tourmodal-section p strong {
+  color: #2e7d32;
+  display: inline-block;
+  width: 180px;
+}
+
+.Tourmodal-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Tourmodal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #0c0c0c;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+.Tourmodal-close-btn:hover {
+  color: #b71c1c;
+}
+
+
+
+.buttondiv {
+  display: flex;
+  height:7rem !important;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.explore-btn {
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+
+.close-btn {
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: #9a0007;
+  transform: scale(1.05);
+}
+
+/* Button container: fixed height to avoid shifting */
+.buttondiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;        /* reserve space */
+  margin: 30px 0 20px 0;
+}
+
+/* Both buttons same size and style except colors */
+.explore-btn,
+.Tourmainclose-btn {
+  min-width: 160px;    /* keep button width consistent */
+  padding: 14px 36px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  user-select: none;
+  text-align: center;
+}
+
+/* Explore button green */
+.explore-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.explore-btn:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Close button red */
+.Tourmainclose-btn {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.Tourmainclose-btn:hover {
+  background-color: #9a0007;
+  transform: scale(1.05);
+}
+
+
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .tour-hero {
+    width: 134%;
+
+  }
+  .tour-hero__title{
+    font-size: 2rem;
+  }
+
+  .buttondiv {
+    width: 134%;
+  }
+
+  .tourContainer {
+    width: 134%;
+  }
+}
+@media (max-width: 350px) {
+  .tour-hero {
+    width: 140%;
+
+  }
+  .tour-hero__title{
+    font-size: 1.5rem;
+  }
+
+  .buttondiv {
+    width: 140%;
+  }
+
+  .tourContainer {
+    width: 140% !important;
+    height:60vh;
+  }
+}

@@ -1,0 +1,64 @@
+.sidebar {
+  position: fixed;
+  top: 4rem;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #e8f5e9;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 18px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #2e7d32;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar-links a:hover {
+  color: #1b5e20;
+}
+
+/* Overlay moved here from App.css */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.4);
+}

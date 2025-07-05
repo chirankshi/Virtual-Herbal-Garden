@@ -1,0 +1,521 @@
+
+  /* QuizStyles.css */
+
+
+.quiz-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.quiz-box,
+.result-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.question-number {
+  color: #1e88e5;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.option-button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid #1e88e5;
+  background-color: #ffffff;
+  color: #1e88e5;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: #e3f2fd;
+}
+
+.option-button.correct {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.option-button.wrong {
+  background-color: #e53935;
+  color: white;
+  border: none;
+}
+
+.submit-button,
+.restart-button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  border-radius: 10px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover,
+.restart-button:hover {
+  background-color: #1565c0;
+}
+
+.result-heading {
+  font-size: 32px;
+  color: #1e88e5;
+  margin-bottom: 20px;
+}
+
+.result-text {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+/* 🪴 Herbal Garden Container 🪴 */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6ffe6 0%, #ccffcc 100%); /* Soft, leafy green gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
+}
+
+/* 📜 Herbal Quiz & Result Boxes 📜 */
+.quiz-box,
+.result-box {
+  background-color: #fafffa; /* Off-white, like aged paper */
+  padding: 60px 50px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(56, 102, 65, 0.15); /* Subtle, earthy shadow */
+  color: #386641;
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+  z-index: 10;
+  border: 1px solid #a7d1a9; /* Light green border */
+}
+
+.level-selection-box .question-number,
+.quiz-info-box .question-number,
+.time-up-box .result-heading,
+.final-result-box .result-heading {
+  color: #588157; /* Muted green for headings */
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.quiz-description,
+.quiz-details,
+.time-up-message,
+.result-message,
+.result-details {
+  color: #7a9e7f; /* Softer green for details */
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.level-options,
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+/* 🔘 Herbal Option Buttons 🔘 */
+.option-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 2px solid #a7d1a9; /* Light green border */
+  background-color: #fff;
+  color: #386641;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(56, 102, 65, 0.08);
+}
+
+.option-button:hover {
+  background-color: #e6ffe6; /* Lighter green on hover */
+  border-color: #588157;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(56, 102, 65, 0.12);
+}
+
+.option-button.correct {
+  background-color: #8ac926 !important; /* Bright, herbal green for correct */
+  color: #fff !important;
+  border-color: #8ac926 !important;
+  animation: pulse 1s infinite alternate;
+}
+
+.option-button.correct::after {
+  content: '✓'; /* Checkmark for correct */
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  color: #fff;
+}
+
+.option-button.wrong {
+  background-color: #d9534f !important; /* Earthy red for wrong */
+  color: #fff !important;
+  border-color: #d9534f !important;
+  animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.option-button.wrong::after {
+  content: '✕'; /* X mark for wrong */
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  color: #fff;
+}
+
+/* 🕹 Herbal Buttons 🕹 */
+.submit-button {
+  margin-top: 30px;
+  padding: 14px 30px;
+  background-color: #588157; /* Muted green for primary action */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 6px 10px rgba(56, 102, 65, 0.3);
+}
+
+.submit-button:hover {
+  background-color: #386641;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(56, 102, 65, 0.4);
+}
+
+.finish-quiz-button {
+  background-color: #8ac926; /* Bright green for finishing */
+}
+
+.finish-quiz-button:hover {
+  background-color: #6bab0f;
+}
+
+.next-question-button {
+  background-color: #f9c74f; /* Sunny yellow for next */
+  color: #386641;
+}
+
+.next-question-button:hover {
+  background-color: #f3a712;
+}
+
+.start-quiz-button {
+  background-color: #379450; /* Sky blue for starting */
+}
+
+.start-quiz-button:hover {
+  background-color: #34a0a4;
+}
+
+.show-results-button {
+  background-color: #f896d8; /* Soft pink for showing results */
+  color: #fff;
+}
+
+.show-results-button:hover {
+  background-color: #e077c2;
+}
+
+/* 🕹 Herbal Buttons - Play Again Button (Leaf Shape Attempt) 🕹 */
+.play-again-button {
+  margin-top: 40px; /* Increased top margin for more space */
+  padding: 20px 40px; /* Increased padding for height and width */
+  background-color: #386641; /* Muted green */
+  color: white;
+  border: none; /* Removed any border */
+  border-radius: 10px; /* Initial rounded corners */
+  font-size: 20px; /* Slightly larger text */
+  font-weight: bold; /* Make the text stand out */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 8px 15px rgba(56, 102, 65, 0.4); /* More pronounced shadow */
+  position: relative; /* For pseudo-elements to create leaf shape */
+  overflow: hidden; /* Clip pseudo-elements */
+}
+
+.play-again-button:hover {
+  background-color: #386641;
+  transform: scale(1.05); /* Slight scale up on hover */
+}
+
+/* Creating Leaf Shape using Pseudo-elements */
+.play-again-button::before,
+.play-again-button::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: inherit; /* Match button color */
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.play-again-button::before {
+  top: -20%;
+  left: 10%;
+  transform: rotate(-45deg);
+}
+
+.play-again-button::after {
+  bottom: -20%;
+  right: 10%;
+  transform: rotate(45deg);
+}
+
+.play-again-button:hover::before,
+.play-again-button:hover::after {
+  opacity: 0.8;
+  transform: scale(1.1) rotate(0deg);
+}
+
+/* Adjust overall result box padding if needed for visual balance */
+.final-result-box {
+  padding: 70px 60px 90px; /* Increased bottom padding to accommodate larger button */
+}
+/* ⏱ Herbal Quiz Page Header ⏱ */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.overall-time-remaining {
+  font-size: 18px;
+  color: #7a9e7f;
+}
+
+/* ⏰ Herbal Time Up Page ⏰ */
+.time-up-icon {
+  font-size: 72px;
+  color: #d9534f; /* Earthy red for time up */
+  margin-bottom: 20px;
+}
+
+/* 🎉 Herbal Result Page 🎉 */
+.final-result-box {
+  padding: 70px 60px;
+}
+
+.final-score {
+  font-size: 30px;
+  font-weight: bold;
+  color: #8ac926; /* Bright green for final score */
+}
+
+.final-percentage {
+  font-size: 22px;
+  color: #588157;
+}
+
+.result-feedback {
+  font-size: 24px;
+  font-weight: bold;
+  color: #588157;
+  margin-bottom: 20px;
+}
+
+.result-saved {
+  font-style: italic;
+  color: #7a9e7f;
+  margin-top: 20px;
+}
+
+/* 🌿 Herbal Hero Section 🌿 */
+
+.quiz-hero-section {
+  background-image: url("https://img.freepik.com/free-photo/futuristic-technology-concept_23-2151908084.jpg?t=st=1746969682~exp=1746973282~hmac=fcaafbaea1d053dda2fc9e9bd2f35b1fa1f4cc58433b01e6640fe24ec9ef2620&w=1380");
+  background-position: center;
+  background-size: cover;
+  height: 50vh !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #092c16;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.quiz-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cover full section */
+  background: rgba(0, 0, 0, 0.4); /* 👈 Darkness level */
+  z-index: 2;
+}
+
+.quiz-hero-section > * {
+  position: relative;
+  z-index: 3; /* Make sure content is above overlay */
+}
+
+
+
+.quiz-hero-text {
+  color: white;
+  font-family: 'Playfair Display', serif; /* Elegant serif for hero text */
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+/* ✨ Herbal Animations ✨ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
+  20%, 40%, 60%, 80% { transform: translateX(4px); }
+}
+
+/* 📱 Herbal Responsive Tweaks 📱 */
+@media (max-width: 768px) {
+  .quiz-box,
+  .result-box {
+    padding: 50px 40px;
+    margin-top: 30px;
+  }
+
+  .question-text {
+    font-size: 20px;
+  }
+
+  .options-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .option-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .submit-button,
+  .restart-button {
+    font-size: 17px;
+    padding: 12px 25px;
+  }
+
+  .hero-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-box,
+  .result-box {
+    padding: 40px 30px;
+    border-radius: 10px;
+  }
+
+  .question-text {
+    font-size: 18px;
+  }
+
+  .option-button {
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 6px;
+  }
+
+  .submit-button,
+  .restart-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+  }
+
+  .hero-text {
+    font-size: 32px;
+}
+}

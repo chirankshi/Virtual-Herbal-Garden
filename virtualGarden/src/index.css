@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+html{
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #0f0f0f;
+  --secondary-color: #337418;
+  --highlight-color: #5DD626;
+  --primary1-color: #202020;
+  --text-color: #f4f4f4;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+section{
+  padding:0.5rem 5rem;
+}

@@ -1,0 +1,920 @@
+body{
+  overflow-x: hidden;
+  background-color: white;
+}
+
+/* Hero Section */
+.explore-plant-hero {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* border:2px solid red !important; */
+  background-image: url("../../assets/images/backgroundGarden.avif") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.explore-plant-hero__overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;   /* Push content to the bottom */
+  justify-content: flex-start; /* Align content to the left */
+  padding: 0 0 40px 10%;  /* Bottom padding + left spacing */
+}
+
+.explore-plant-hero__title {
+  font-size: 4rem;
+  /* font-weight: bold; */
+  color: #fff;
+  line-height: 1.1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/*  intro */
+
+
+.content_introPlant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 5%;
+  min-height: 40vh;
+  gap: 40px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  background-color: #f5f5f5; /* optional light background */
+}
+
+.contentmainhead h2 {
+  font-size: 3rem;
+  color: #2e6431;
+  max-width: 250px;
+  font-size: bold;
+  margin: 0;
+}
+
+.contentMainVideo .videocard-container {
+  min-width: 35rem;
+  min-height: 38vh;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+/* ✅ Actual video styling */
+.custom-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0.5; */
+  transition: opacity 0.3s ease;
+}
+
+.custom-video.playing {
+  opacity: 1;
+}
+
+/* ✅ Overlay with dark shade and centered play button */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.6); darker shade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.03s ease-in;
+}
+.video-overlay:hover{
+  background: rgba(0, 0, 0, 0.6); 
+  opacity:0.5;
+
+}
+
+.play-button {
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+  transform: scale(1.2);
+}
+
+.contentmainintro {
+  max-width:25rem ;
+  font-size: 1.5rem;
+  border:none;
+  padding: 1rem;
+  border-radius:1rem;
+  line-height: 1.6;
+  color: #444;
+  transition: background-color 0.3s ease-in,border 0.3s ease-in;
+}
+
+.contentmainintro:hover{
+  background-color: rgb(240, 240, 232);
+  border:2px solid rgb(34, 67, 34)
+}
+
+
+/* 🔁 For laptops and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .explore-plant-hero__title {
+    font-size: 3rem;
+  }
+
+  .content_introPlant {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 5%;
+    gap: 30px;
+  }
+
+  .contentMainVideo .videocard-container {
+    min-width: 100%;
+    min-height: 30vh;
+  }
+
+  .contentmainintro {
+    max-width: 100%;
+  }
+}
+
+/* 📱 For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .explore-plant-hero__title {
+    font-size: 2.5rem;
+  }
+
+  .contentmainhead h2 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .contentMainVideo .videocard-container {
+    min-height: 25vh;
+  }
+
+  .contentmainintro {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📱 For small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .explore-plant-hero__title {
+    font-size: 2rem;
+  }
+
+  .content_introPlant {
+    padding: 20px 5%;
+    gap: 20px;
+  }
+
+  .contentmainhead h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .contentmainintro {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .play-button {
+    font-size: 3rem;
+  }
+}
+
+/* Featured Plants */
+
+.featuredplant{
+  min-height: 50vh;
+  background-color: #204F3c;
+}
+
+.featuredplant h3{
+  color: white;
+  font-size: 3rem;
+  padding: 1rem;
+  padding-left:1em;
+  
+}
+
+.featuredplantscard {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 40vh;
+  /* border: 2px solid red; */
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 2%;
+}
+
+
+/* Plant Card Styling */
+.plantCards {
+  position: relative;
+  width: 220px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.plantCards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.plantCards img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Plant Name */
+.plantName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2e6431;
+  padding: 1rem 0 0.5rem;
+  text-align: center;
+}
+
+/* Button Overlay Hidden Initially */
+.plantoverlaybutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0); /* Transparent initially */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+.plantCards:hover .plantoverlaybutton {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/* Learn More Button */
+.learnmore {
+  padding: 0.5rem 1rem;
+  background-color: #f2f5f2;
+  color: rgb(21, 21, 21);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-size: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.learnmore:hover {
+  background-color: #3a7a45;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plantCards {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .plantCards {
+    width: 100%;
+  }
+}
+
+
+/* medicinal prepration*/
+.plant-page__content {
+  min-height: 80vh;
+  background-color: #204F3c;
+  padding: 0;
+}
+
+.plant-page__heading {
+  min-height: 40vh;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.plant-page__heading .plant-page__title {
+  width: 36vw;
+  height: auto;
+}
+
+.plant-page__heading h1 {
+  font-size: 4rem !important;
+  width: 100%;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+
+.plant-page__description {
+  width: 40vw;
+  height: auto;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: rgb(226, 219, 219);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .plant-page__heading {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .plant-page__heading .plant-page__title,
+  .plant-page__description {
+    width: 90vw;
+  }
+
+  .plant-page__heading h1 {
+    font-size: 2.5rem !important;
+    width: 100%;
+  }
+
+  .plant-page__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plant-page__heading h1 {
+    font-size: 2rem !important;
+  }
+
+  .plant-page__description {
+    font-size: 1rem;
+  }
+}
+
+.plant-page__divider {
+  height: 2px;
+  background-color: #9b9696;
+  border: none;
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.plant-page__content-body {
+  min-height: 70vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+}
+
+.plant-page__image-container {
+  width: 25rem;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plant-page__content-body img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.plant-page__cards-container {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  flex: 1;
+  max-width: 900px;
+}
+
+.plant-page__card {
+  background-color: transparent;
+  padding: 2rem;
+  border-radius: 16px;
+  color: whitesmoke !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.plant-page__card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.plant-page__card p {
+  font-size: 1.15rem;
+  color: white;
+}
+
+.plant-page__card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .plant-page__cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.plant-page__content {
+  min-height: 80vh;
+  /* background-color: #C7F6C7; */
+  background-color: #e3fad7;
+  color: black;
+  padding: 0;
+}
+
+.plant-page__heading {
+  min-height: 40vh;
+  color: rgb(36, 35, 35);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+
+.plant-page__heading h1 {
+  font-size: 3rem !important;
+  width: 100%;
+  text-transform: uppercase;
+  color: rgb(30, 29, 29);
+  margin: 0;
+}
+
+.plant-page__description {
+  width: 40vw;
+  height: auto;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  color: rgb(95, 92, 92);
+}
+
+.plant-page__divider {
+  height: 2px;
+  background-color: #545151;
+  border: none;
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.plant-page__details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.plant-page__cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  flex: 1;
+}
+
+.plant-page__card {
+  background-color: transparent;
+  padding: 2rem;
+  min-height: 25vh;
+  width:25rem;
+  border-radius: 16px;
+  color: rgb(63, 62, 62) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.plant-page__card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: rgb(46, 46, 46);
+}
+
+.plant-page__card p {
+  font-size: 1.15rem;
+  color: rgb(61, 59, 59);
+}
+
+.plant-page__card .img {
+  height: 30vh;
+  width: 100%; /* Set to 100% to make sure it fits within the card */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.plant-page__card img {
+  width: 100%; /* Set width to 100% to make it fit the container */
+  height: auto; /* This ensures that the image maintains its aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+}
+
+
+.plant-page__card:hover {
+  transform: translateY(-5px);
+}
+
+.plant-page__video-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plant-page__video {
+  width: 100%;
+  height: 72vh; 
+  object-fit: cover;
+}
+
+.video-overlay-plant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay-plant:hover {
+  opacity: 1;
+}
+
+.play-button-plant {
+  font-size: 3rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .plant-page__cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-page__video-container {
+    max-width: 100%;
+  }
+}
+
+
+/* Base responsive tweaks */
+@media (max-width: 1024px) {
+  .plant-page__heading {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .plant-page__heading .plant-page__title,
+  .plant-page__description {
+    width: 90%;
+  }
+
+  .plant-page__heading h1 {
+    font-size: 2.8rem !important;
+  }
+
+  .plant-page__description {
+    font-size: 1.15rem;
+  }
+
+  .plant-page__details {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .plant-page__cards-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .plant-page__card {
+    width: 90%;
+    margin: auto;
+  }
+
+  .plant-page__video-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .plant-page__video {
+    height: 45vh;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .plant-page__heading h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .plant-page__description {
+    font-size: 1rem;
+  }
+
+  .plant-page__card {
+    padding: 1.2rem;
+  }
+
+  .plant-page__card h4 {
+    font-size: 1.2rem;
+  }
+
+  .plant-page__card p {
+    font-size: 1rem;
+  }
+
+  .plant-page__video {
+    height: 35vh;
+  }
+
+  .play-button-plant {
+    font-size: 2.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .plant-page__heading h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .plant-page__description {
+    font-size: 0.95rem;
+  }
+
+  .plant-page__card {
+    width: 95%;
+  }
+}
+
+
+/*slider explore plant*/
+
+
+.explore-plantsPage-heading{
+  min-height:20vh;
+  padding: 1rem;
+}
+.explore-plantsPage-heading h2{
+  text-align: left;
+  font-size: 3rem;
+  color: #204F3c;
+}
+.explore-plantsPage-heading p{
+  text-align: center !important;
+  
+  font-size: 1.5rem;
+  color: #545151;
+}
+
+
+
+/* take care plant*/
+
+.takecareplant{
+  min-height:50vh;
+  margin-top:1rem;
+  padding: 1rem;
+  background-color:#204F3c;
+}
+
+.mainHeadTakecare{
+  color: white;
+}
+.mainHeadTakecare h1{
+  font-size: 3.2rem;
+  text-align: center;
+  color: #ffffff;
+  font-style: bold;
+}
+.mainHeadTakecare p{
+  font-size:1.5rem;
+  text-align: center !important;
+  color: #f2f5f2;
+}
+
+
+.TakecareStepsCards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 2rem;
+  min-height: 45vh;
+  /* background-color: #f5fdf5; soft green tint */
+}
+
+.TakecareStepCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  min-height: 40vh;
+  height: 53vh;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.TakecareStepCard:hover {
+  transform: translateY(-5px);
+}
+
+.TakecareStepCard img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.TakecareStepCard h3 {
+  font-size: 1.2rem;
+  color: #2d6a4f;
+  margin-bottom: 0.5rem;
+}
+
+.TakecareStepCard .hr {
+  width: 130px;
+  height: 3px;
+  background-color: #52b788;
+  margin: 0.5rem auto 1rem;
+  border-radius: 2px;
+}
+
+.TakecareStepCard p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.masonry-container{
+  min-height: 80vh;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.masonry-container h1{
+  color:#515453;
+  font-size: 4rem;
+  text-align: left;
+}
+
+@media (max-width: 400px){
+
+.explore-plant-hero{
+    width: 135%;
+}
+
+.content_introPlant{
+  width: 135%;
+}
+
+.featuredplant{
+  width: 135%;
+}
+
+.plant-page__content{
+  width: 135%;
+}
+
+.sliderexploreplant{
+  width: 135%;
+}
+.takecareplant{
+  width: 135%;
+}
+
+.masonry-container{
+  width: 135%;
+}
+
+.footcont{
+  width: 135%;
+}
+
+}
+@media (max-width: 300px){
+
+.explore-plant-hero{
+    width: 153%;
+}
+
+.content_introPlant{
+  width: 153%;
+}
+
+.featuredplant{
+  width: 153%;
+}
+
+.plant-page__content{
+  width: 153%;
+}
+
+.sliderexploreplant{
+  width: 153%;
+}
+.takecareplant{
+  width: 153%;
+}
+
+.masonry-container{
+  width: 153%;
+}
+
+.footcont{
+  width: 153%;
+}
+
+}
+@media (max-width: 200px){
+
+.explore-plant-hero{
+    width: 218%;
+}
+
+.content_introPlant{
+  width: 218%;
+}
+
+.featuredplant{
+  width: 218%;
+}
+
+.plant-page__content{
+  width: 218%;
+}
+
+.sliderexploreplant{
+  width: 218%;
+}
+.takecareplant{
+  width: 218%;
+}
+
+.masonry-container{
+  width: 218%;
+}
+
+.footcont{
+  width: 218%;
+}
+
+}

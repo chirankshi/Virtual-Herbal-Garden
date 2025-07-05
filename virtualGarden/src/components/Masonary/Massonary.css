@@ -1,0 +1,126 @@
+.ourTeam__MasonaryContainer {
+    background-color: transparent;
+    padding: 2rem;
+    border-radius: 16px;
+    padding-top: 3rem;
+    color: whitesmoke;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Masonry Grid Styling */
+  .my-masonry-grid {
+    display: -webkit-box; /* for older Safari */
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -1.5rem; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 1.5rem; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Individual masonry items */
+  .masonry-item {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .masonry-item img {
+    width: 100%;
+    height: auto; /* allows image height to adjust naturally */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  
+  /* Hover effect */
+  .masonry-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  .ourTeam__MasonaryContainer {
+    background-color: transparent;
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 16px;
+    color: whitesmoke;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Masonry Grid Styling */
+  .my-masonry-grid {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    margin-left: -1.5rem; /* gutter size offset */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 1.5rem; /* gutter size */
+    background-clip: padding-box;
+    flex: 1; /* Ensures even column distribution */
+  }
+  
+  /* Individual masonry items */
+  .masonry-item {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .masonry-item img {
+    width: 100%;
+    height: auto; /* allows image height to adjust naturally */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .masonry-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  
+  /* For smaller devices like mobile */
+  @media (max-width: 768px) {
+    .my-masonry-grid {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+    .my-masonry-grid_column {
+      padding-left: 0;
+    }
+  
+    .masonry-item {
+      margin-bottom: 1rem; /* Reducing margin between items */
+    }
+  }
+  
+  /* For very small devices like mobile portrait */
+  @media (max-width: 480px) {
+    .my-masonry-grid_column {
+      flex: 100%;
+    }
+  
+    .masonry-item {
+      margin-bottom: 0.8rem; /* Further reducing margin */
+    }
+  }
+  
